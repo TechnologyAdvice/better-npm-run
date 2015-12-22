@@ -17,18 +17,32 @@
     "better-npm-run": "index.js"
   },
   "scripts": {
-    "test": "node index.js test --test"
+    "test": "node index.js test --test",
+    "help": "node index.js help",
+    "start": "node index.js start"
   },
   "dependencies": {
     "endofline": "0.0.3",
     "object-assign": "^4.0.1"
   },
   "betterScripts": {
+    "start": {
+      "help": "make it do stuff and everything",
+      "command": "node ./foo.js",
+      "env": {
+        "DEBUG": "*"
+      }
+    },
     "test": {
+      "help": "run the test thing",
       "command": "node test.js",
       "env": {
         "FOO": "bar"
       }
+    },
+    "build": {
+      "help": "get a place to live",
+      "command": "webpack"
     }
   }
 }
